@@ -443,9 +443,18 @@
 
 <h3>02.03 Ethernet Switching</h3>
     <b>Introduction to Ethernet</b>
-        
+        <b>Ethernet Frame</b> =  Preamble -> SFD -> Destination MAC -> Source MAC -> EtherType -> Payload -> FCS
+        <b>Destination MAC</b> - 
+        <b>Source MAC</b>      - 
+
+        <b>Full Duplex</b> - send and receive at same time; no collision
+        <b>Half Duplex</b> - only send or receive at 1 time  
+            <b>CSMA/CD</b> Carrier Sense Multiple Access / Collision Detect;                    
 
     <b>Network Switching Overview</b>
+        <b>Switch</b> - forward traffic based on MAC Address
+
+        If the switch does not have a MAC address table built it will flood all connected devices (broadcast) and build the table with the results
 
     <b>VLANs and Trunking</b>
 
