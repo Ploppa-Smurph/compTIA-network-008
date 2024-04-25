@@ -12,8 +12,34 @@
 <h3>01.01 OSI Model</h3>
     <b>Understanding the OSI</b>
         <b>OSI (Open Systems Interconnection) Reference Model</b>
+            <b><i>Layer 1 = Physical</i></b> --> Bits, Hub;                             Protocols = not about protocols, about cabling
+            <b><i>Layer 2 = Data Link</i></b> --> Frames; MAC Address, switching layer; Protocols = MAC address
+            <b><i>Layer 3 = Network</i></b> --> Routing Layer; IP Addresses, Frames are fragmented before transport   Protocol = IP
+            <b><i>Layer 4 = Transport</i></b> --> Post Office Layer;                    Protocols = TCP and UDP
+            <b><i>Layer 5 = Session</i></b> --> Start and Stop communication; Control and Tunneling      Protocols = ?
+            <b><i>Layer 6 = Presentation</i></b> --> Character encoding, encryption of application data  Protocols = SSL/TLS 
+            <b><i>Layer 7 = Application</i></b> --> layer we see;                       Protocols = FTP, HTTP, HTTPS, SSH, IMAP
 
     <b>Data Communication</b>
+        <b>Protocol Data Unit (PDU)</b> - aka 'Transmission Units'
+
+        <b>Encapsulation and Decapsulation</b>
+            Layer 5,6,7 (Application)  -                        App Data
+            Layer 4     (Transport)    -             TCP Head - App Data
+            Layer 3     (Network)      -   IP Head - TCP Head - App Data 
+            Layer 2     (Data Link)    - Frame Head - IP Head - TCP Head - App Data - Frame Trailer
+
+        Each layer has a 'Header' and 'Payload' 
+
+        <b>TCP Flags</b> - part of the TCP header and contains important control information
+            <i>SYN</i> - synchronize sequence
+            <i>PSH</i> - push to application without buffering
+            <i>RST</i> - reset connection
+            <i>FIN</i> - last packet from sender
+
+        <b>MTU (Maximum Transmission Unit)</b> - Max IP packet to transmit without fragmenting
+            Fragmentation slows transmission down, if you lose a fragment, you lose an entire packet; 
+            ** with VPN the tunnel size may be smaller than the network's MTU size which can be a concern
 
 <h3>01.02 Network Topologies and Types</h3>
     <b>Network Toplogies</b>
