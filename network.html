@@ -454,13 +454,38 @@
     <b>Network Switching Overview</b>
         <b>Switch</b> - forward traffic based on MAC Address
 
-        If the switch does not have a MAC address table built it will flood all connected devices (broadcast) and build the table with the results
+        If the switch does not have a MAC address table built it will flood all connected devices (broadcast) and start to build the table with the response
+        <b>ARP Address Resolution Protocol</b> = 
+            <b><i>ARP Requst Broadcast</i></b>
+            <b><i>ARP Response</i></b>
+
+        <b>NDP (Neighbor Discovery Protocol)</b> - in IPv6 
+            <b><i>Neighbor Solicitation</i></b>
+            <b><i>Neighbor Advertisement</i></b>
+         
+        <b>POE Power Over Ethernet</b>  
 
     <b>VLANs and Trunking</b>
+        <b>VLANs (Virtual Local Area Network)</b> - good for 'segmentation' within the domain
+
+        <b>Trunking</b> - creating a single link to communicate between VLANs; 802.1Q Trunking 
+        <b>Data Voice Cabling</b> - single network link; can use Trunking (802.1Q) to seperate Phone and Computer, even if they are connected through same cable
 
     <b>Spanning Tree Protocol</b>
+        <b>Loop Protection</b> Radia Perlman (1990), IEEE standard 802.1D, spanning tree protocol
+        <b>Spanning Tree Protocol</b> - sets Port States
+            <b><i>Blocking</i></b>
+            <b><i>Listening</i></b>
+            <b><i>Forwarding</i></b>
+            <b><i>Disabled</i></b>
+        <b>RSTP Rapid Spanning Tree Protocol</b> - 802.1w
 
     <b>Interface Configurations</b>
+        <b>Speed / Duplex configurations</b> - needs to match between switches
+        <b>IP Address Management</b> - 
+        <b>VLANs</b>
+        <b>Trunking</b>
+        <b>LAG Link Aggrigation / Port Bonding</b> - LACP Link Aggrigation lins multiple switch ports to act as one device and increase throughput
 
     <b>Straight-Through and Crossover Cables</b>
 
