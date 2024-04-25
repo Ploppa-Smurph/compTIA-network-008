@@ -306,10 +306,40 @@
             <b>Address Lease</b>
             <b>Reservations</b>
             <b>Scope Options</b>
-        
-    <b>An Overview of DNS</b>
+        <b>Static Assignment</b> - aka Address Reservation; input MAC address and request IP address for this device
+        <b>Lease Timer</b>
+            <b><i>T1 Timer</i></b> - checks @ 50%
+            <b><i>T2 Timer</i></b> - checks @ 87.5% (7/8th) of expiration time to renew the lease
+
+    <b>An Overview of DNS</b> - Domain Name System
+        <b>Domain Name System</b> - translates IP addresses to readable text names
+        <b>Top-Level Domain</b> - ex: .com; .net; .edu; .org; etc...
+
+        <b>Resolver</b> - local client device requesting the DNS information
+
+        <b>Authoritative</b> - from the DNS Server, the authority for the zone
+        <b>Non-authoritative</b> - probably from cached record
+        <b>TTL Time-to-Live</b> - specifies how long cache is valid
+
+        <b>Forward Lookup</b> - use the domain.name 
+        <b>Reverse DNS Query</b> - use the IP address for lookup
+
     <b>DNS Record Types</b>
-    <b>An Overview of NTP</b>
+        <b>Start of Authority (SoA)</b> - describes DNS zone details
+        <b>Resource Records</b> 
+            <b><i>A    = IPv4</i></b>
+            <b><i>AAAA = IPv6</i></b>
+            <b>Canonical Name Records (CNAME)</b> - aliases
+            <b>Service Records</b> - 
+            <b>Mail Exchanger Record (MX)</b> - 
+            <b>Name Server Records (NS)</b>
+            <b>Pointer (PTR) record</b> - 
+            <b>Text Records</b> - human readable text
+                <b>SPF</b> - Sender Policy Framework - prevent mail spoofing
+                <b>DKIM</b> - Domain Keys Identified Mail - digitally sign outgoing mail
+        <b>Zone Transfer</b> - if we make changes to Primary DNS database then all secondary servers will automatically be transferred
+
+    <b>An Overview of NTP</b> - Network Time Protocol 
 
 <h3>01.07 Network Architecture</h3>
     <b>Network Architectures</b>
