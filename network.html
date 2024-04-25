@@ -340,14 +340,52 @@
         <b>Zone Transfer</b> - if we make changes to Primary DNS database then all secondary servers will automatically be transferred
 
     <b>An Overview of NTP</b> - Network Time Protocol 
+        synchronize clocks -- UDP/123 Server
+            <b>Stratum</b> - level of steps from the source; Naval Clock is stratum 0
 
 <h3>01.07 Network Architecture</h3>
     <b>Network Architectures</b>
+        <b>3-tier</b>
+            <b>Core of network</b>
+            <b>Distribution tier</b> - allows communication between clients / servers
+            <b>Access tier</b> - access for users 
 
-    <b>Storage Area Networks</b>
+        <b>SDN (Software Defined Networking)</b> - networking devices; Planes of 
+            <i>Data</i>    - Infrastructure layer, process network frames and packets -- the physical ports
+            <i>Control</i> - manages actions, has routing tables, dynamic routing tables
+            <i>Management</i> - users manage the devices; SSH, SNMP, API for management
+
+        <b>Spine and Leaf architecture</b> aka Top-of-rack switching; difficult to scale up
+
+        <b>Traffic Flow</b>
+            <b><i>East-West</i></b> - traffic across the same network
+            <b><i>North-South</i></b> - moving between layers of network
+
+        <b>Network Locations</b> 
+            <b><i>Branch office</i></b>
+            <b><i>On-premises</i></b>
+            <b><i>Colocation</i></b>
+            <b><i></i></b>
+
+    <b>Storage Area Networks</b> = SAN
+        Block level access, acts more similar to local hard drive
+
+        <b>Fibre Channel</b> - high-speed topology
+        <b>FCoE Fibre Channel over Ethernet</b>
+        <b>iSCSI</b> - internet Small Computer Systems Interface
 
 <h3>01.08 The Cloud</h3>
     <b>Cloud Models</b>
+        <b>IaaS</b> Infrastructure as a Service, 3rd party provides all the hardware, client may provide OS
+        <b>PaaS</b> Platform as a Service, 3rd party provides server and building blocks to make apps
+        <b>SaaS</b> Software as a Service, things like gmail
+
+        <b>Public</b> - 
+        <b>Community</b> - shared between similar organizations
+        <b>Private</b>
+        <b>Hybrid</b> - mix of public and private
+
+        <b>DaaS</b> - Desktop as a Service 
 
     <b>Designing the Cloud</b>
 
