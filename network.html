@@ -169,13 +169,45 @@
         
         <b>128    64    32     16     8      4      2       1</b> 
 
-    <b>IPv4 Addressing</b>
+    <b>IPv4 Addressing</b> - layer 3 (OSI Layer 3)
+        <b>IP Address</b>
+        <b>Subnet Mask</b>
+        <b>Default Gateway</b> - allows communication from inner network to outside
 
-    <b>Network Address Translation</b>
+        <b>Loopback Address</b> - 127.0.0.1
+        <b>Reserved Addresses</b>  = 240.0.0.1 - 254.255.255.254 -- these are 'Class E' addresses
+        <b>VIP Address (Virtual IP)</b> - virtual machine IP
+
+        -- IPv4 addresses are 32-bit (4 byte), max decimal value for each byte is 255
+
+        <b>DHCP Dynamic Host Configuration Protocol</b> - auto config IP address, gateway, and more
+        <b>APIPA Automatic Private IP Address</b> aka 'Link Local Address' - 169.254.0.1
+            cannot communicate with router or network, start with 169
+
+    <b>Network Address Translation</b> - occurs in Router - changes inner network communication IP to public IP address when running through Router
+        <b>NAT Network Address Translation</b> 
+
+        <b>Private IP Addresses</b>
+            <b><i>10.0.0.0 - 10.255.255.255</i></b>     - Class A
+            <b><i>172.16.0.0 - 172.31.255.255</i></b>   - Class B
+            <b><i>192.168.0.0 - 192.168.255.255</i></b> - Class C
+
+        <b>NAT Overload / Port Address Translation (PAT)</b> - 
 
     <b>Network Communication</b>
+        <b>Unicast</b>   - one-to-one 
 
-    <b>Classful Subnetting</b>
+        <b>Multicast</b> - one-to-many; does not scale well across large networks
+
+        <b>Broadcast</b> - one-to-all; limited to the 'Broadcast Domain'
+            ARP is a type of IPv4 Broadcast, an ARP request is broadcast to all devices connected to broadcast domain
+
+        <b>Anycast</b> - ?? DNS is a type of anycast ??
+
+    <b>Classful Subnetting</b> - 
+        <b>Class A</b> - Host 24; 1st octet = (001 - 127)
+        <b>Class B</b> - Host 16; 1st octet = (128 - 191)
+        <b>Class C</b> - Host 8;  1st octet = (192 - 223)  
 
     <b>IPv4 Subnet Masks</b>
 
