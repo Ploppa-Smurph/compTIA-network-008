@@ -205,9 +205,28 @@
         <b>Anycast</b> - ?? DNS is a type of anycast ??
 
     <b>Classful Subnetting</b> - 
-        <b>Class A</b> - Host 24; 1st octet = (001 - 127)
-        <b>Class B</b> - Host 16; 1st octet = (128 - 191)
-        <b>Class C</b> - Host 8;  1st octet = (192 - 223)  
+        <b>Class A</b> - Host 24; 1st octet = (001 - 127); subnet mask = 255.0.0.0
+        <b>Class B</b> - Host 16; 1st octet = (128 - 191); subnet mask = 255.255.0.0
+        <b>Class C</b> - Host 8;  1st octet = (192 - 223); subnet mask = 255.255.255.0 
+        
+        <b>Subnet parts: </b>
+            <i>Network Address</i> - 1st part of the subnet
+            <i>First Usable Host Address</i> = Network Address + 1 (1 more than network address)
+            <i>Network Broadcast Address</i>
+            <i>Last Usable Host Address</i> = Broadcast Address - 1 (1 less than broadcast address)
+
+        ex: IPv4 10.74.222.11; class A w/ subnet of 255.0.0.0
+             Network    = 10.0.0.0       -- for the network address set all host bits to 0 
+             Host       = 74.222.11
+             First Host = 10.0.0.1
+             Broadcast  = 10.255.255.255 -- for broadcast set all host bits to 255
+             Last Host  = 10.255.255.254
+
+        ex2: 172.16.88.200; class B w/ subnet of 255.255.0.0
+             Network    = 172.16.0.0 
+             First Host = 172.16.0.1
+             Broadcast  = 172.16.255.255 
+             Last Host  = 172.16.255.254
 
     <b>IPv4 Subnet Masks</b>
 
