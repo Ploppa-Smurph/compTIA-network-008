@@ -251,21 +251,55 @@
 
     <b>Seven Second Subnetting</b>
 
-    <b>IPv6 Addressing</b>
 
-    <b>IPv6 Subnet Masks</b>
+    <b>IPv6 Addressing</b> - 128-bit (16 byte) 
+        - seperated by ":" ex: fe80:0000:0000:0000:5d18:0652:cffd:8f52
+                           shortened     fe80::5d18:652:cffd:8f52
 
-    <b>Configuring IPv6</b>
+        - groups of zeros can be abbreviated with double colon, only one abbreviation per address
+        - leading zeros are optional
+
+                         ex: 2600:DDDD:1111:0001:0000:0000:0000:0001 
+        remove leading zero: 2600:DDDD:1111:   1:   0:   0:   0:   1
+        remove group zero  : 2600:DDDD:1111:1::1
+
+        <b>EUI-64</b> aka Extended Unique Identifier
+            use MAC address (48-bit) as 64-bit EUI-64
+                1st 3 bytes (24-bits) = OUI Organizationally Unique Id
+                2nd 3 bytes           = Network Interface Controller Specific S/N
+                add FFFE in the middle
+
+    <b>IPv6 Subnet Masks</b> - IANA Internet Assigned Numbers Authority = 
+
+    <b>Configuring IPv6</b> 
+        <b>6to4</b> - tunnels IPv6 to IPv4; NO NAT Support
+        <b>4in6</b>
+        <b>Teredo / Miredo</b> - temporary communication
+        <b>Dual-Stack routing</b>
+
+        NO ARP in IPv6; how do we advertise for other devices??
+         <b>Neighbor Solicitation</b> - is sent
+         <b>Neighbor Advertisement</b> - the response
 
 <h3>01.05 Ports and Protocols</h3>
-    <b>Introduction to IP</b>
-
+    <b>Introduction to IP</b> - the moving truck -- we load packets of TCP or UDP and send over the network
+    <b>Encapsulated</b> -- TCP and UDP are Layer 4 protocols
+        <b>TCP</b> - reliable delivery
+        <b>UPD</b> - does not get acknowledgement; 'Connectionless' 
+    
     <b>Common Ports</b>
 
     <b>Other Useful Protocols</b>
 
 <h3>01.06 Network Services</h3>
-    <b>DHCP Overview</b>
+    <b>DHCP Overview</b> - UDP/67 & UDP/68
+        <b>Dynamic Host Configuration Protocol (DHCP)</b> - provides auto configuration
+            - New client joins and sends 'Discover' message via broadcast            (UDP /67)
+            - DHCP server responds with 'Offer' message (also sent via broadcast)    (UDP /68)
+            - client sends 'Request' message to server to verify receipt of IP information
+            - server sends 'Acknowledgement' message to client
+        <b>DHCP relay</b> - configured on router; aka 'IP Helper'; tells router to forward DHCP broadcasts to DHCP server
+        
     <b>Configuring DHCP</b>
     <b>An Overview of DNS</b>
     <b>DNS Record Types</b>
