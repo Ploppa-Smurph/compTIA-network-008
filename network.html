@@ -930,8 +930,35 @@
         <b>Establish Network Performance Baseline</b>
 
     <b>Common Network Issues - Part 1</b> - 
+        <b>Collisions</b> - if connected to a hub there can be collisions transmitting data using CD
+        <b>Full Duplex Collisions</b> - if 1 device is working on half and the other on full, check settings
+        <b>Broadcast Stotm</b> - 
+        <b>Duplicate MAC Address</b> - could be an on-path attack
+        <b>Duplicate IP Address</b>
+        <b>Multicast Flooding</b>
+        <b>IGMP Snooping</b> - allow switches to monitor for multicast traffic
+        <b>Asymmetric Route</b> - 
+        <b>Switching Loop</b> - use 'Spanning Tree Protocol'
+        <b>Routing Loop</b> - 
 
-    <b>Common Network Issues - Part 2</b>
+    <b>Common Network Issues - Part 2</b> - 
+        <b>rouge DHCP Server</b> - no security on DHCP server, enable 'DHCP Snooping'.
+            <i>make certain to renew all IP addresses after a rouge DHCP server has been removed</i>
+        <b>exhausted DHCP Scope</b> - APIPA, cannot communicate with the internet, use IPAM device
+        <b>IP Configuration Issue</b> - confirm IP address, Subnet Mask, Gateway, and DNS information
+            <i>monitor traffic</i>
+            <i>check other devices on the same link</i>
+            <i>use ping and tracert to check connectivity</i>
+        <b>Low Optical Link Budget</b> - clean connector tips, check fibre with light meter
+        <b>Certificate Errors</b> - 
+        <b>Hardware Failure</b> - 
+        <b>Incorrect Firewall Setting</b> 
+        <b>Incorrect VLAN Configurations</b>
+        <b>DNS Issues</b> - can ping, but can't browse to FQDN
+        <b>NTP Sites</b> - Network Time Protocol, configures Date and Time
+        <b>BYOD Bring Your Own Device</b>
+        <b>Licensed Feature Issues</b>
+        <b>Network Performance Issue</b>
 
 </pre>    
 </body>
