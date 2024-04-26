@@ -696,13 +696,41 @@
         <b>Honeypots</b> - Kippo, Google Hack Honeypot, Wordpot
 
     <b>Authentication Methods</b> 
+        <b>Local Authentication</b> - stored on local physical machine
+        <b>MFA Multi-factor Authentication</b>
+        <b>RADIUS Remote Authentication Dial-In User Service</b> - authentication server
+        <b>TACACS or TACACS+</b> - terminal access control; remote-authentication protocol -- CISCO uses TACACS+ 
+        <b>LDAP Lightweight Directory Access Protocol</b> - for reading and writing directories over IP network; organized set of records like a phone directory
+                commonly used with Windows Active Directory
+        <b>Kerberos</b> - authenticate once and access to the system; 
+            - single sign on cryptographic tickets
+            1) client request 'Ticket Granting Ticket' from KDC (Ticket Granting System)
+                - if credentials are correct a 'Service Ticket' is granted.
+            2) the client presents the 'Service Ticket' to the Application Server
+            3) Mutual Authentication is provided
+            4) Data can be transferred
+        <b>802.1X</b> - EAP Extensible Authentication Protocol and RADIUS (or another Authentication)
 
     <b>Risk Management</b>
+        <b>Threat Assessment</b> - do the research
+        <b>Vulnerability Assessment</b> - less intensive then Pentesting
+        <b>Penetration Testing</b> - trying to exploit vulnerabilities
+        <b>Posture Assessment</b> - check BYOD to make certain it is safe and up to organizational standards
+        <b>Risk Assessment</b> - define hardware and risk associated with each asset
+            <b><i>Identify Threats</i></b>
+            <b><i>Determine the Risk</i></b>
+            <b><i>Process Assessment</i></b>
+        <b>Vendors</b> - chance that vendor is risk when sharing data; they must secure your organization's data
+        <b>SIEM Security Information and Event Management</b> - log aggregation and data correlation
+            <i>Trends, Alerts, and Correlation of large amounts of log file data</i>
 
 <h3>04.02 Common Attacks</h3>
-    <b>Denial of Service</b>
+    <b>Denial of Service</b> - forcing a service to fail
+        often overloading a system with request from outside sources with 'Bots'
+        <b>DDoS</b> - zombie or botnet; Distributed Denial of Service 
+        <i>Block communication back to the C&C Command and Control with the firewall</i>
 
-    <b>On-Path Attacks</b>
+    <b>On-Path Attacks</b> - Meanies-in-the-Middle; 
 
     <b>VLAN Hopping</b>
 
