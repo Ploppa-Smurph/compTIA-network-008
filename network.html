@@ -750,14 +750,39 @@
     <b>Malware and Ransomware</b> - 
 
     <b>Password Attacks</b> - 
-        <b></b>
+        <b>Plaintext / Unencrypted</b>
+        <b>Hashing</b> - aka message digest / fingerprint
+        <b>Brute Force</b> - try every password combination
+        <b>Dictionary Attack</b> - 
+        <b>Rainbow Table</b> - Hash of passwords
 
-    <b>Deauthentication</b>
+    <b>Deauthentication</b> - being forced off wireless network, type of DoS attack to disconnect users
+        <i>Addressed with 802.11w which encrypts the management frames in modern systems</i>
 
-    <b>Social Engineering</b>
+    <b>Social Engineering</b> -
+        <b>Phishing</b> - 
+        <b>Tailgating / Piggybacking</b> - uanuthorized person sneaks in
+        <b>Shoulder Surfing</b>
 
 <h3>04.03 Network Hardening</h3>
     <b>Network Hardening</b>
+        <b>SNMP Simple Network Management Protocol</b> - monitor and control servers, switches, routers, firewalls and other devices
+        <b>Router Advertisement (RA) Guard</b> - protect IPv6 Solicitation and Advertisement 
+        <b>Port Security</b> - based on MAC address
+        <b>Dynamic ARP Inspection (DAI)</b> - relies on DHCP snooping to help monitor again ARP Spoofing
+        <b>Control Plane Policing</b> - manage traffic
+        <b>Private VLANs</b> - use Port Isolation
+        <b>Disable Unused Interfaces</b>
+        <b>Disable Unnecessary Ports & Services</b>
+        <b>Always Change Default Credentials</b>
+        <b>Use Password Complexity and Length</b> - increase entropy of passwords
+        <b>DHCP Snooping</b> - use IP tracking on a layer 2 device (switch); builds list of 'untrusted'
+        <b>Change Default VLAN</b> and assign unused interfaces to a 'Dead-end' or 'Impasse' VLAN
+        <b>Always Upgrade Firmware</b>
+        <b>Patch Management</b>
+        <b>Role-Based Access</b> - different access for different Groups / Roles
+        <b>ACLs (Access Control List)</b> - restrict or allow network access based on IP address, MAC address, Port Number
+            <b><i>Firewalls Rules</i></b>
 
     <b>Wireless Security</b>
 
