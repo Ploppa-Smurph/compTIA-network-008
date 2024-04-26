@@ -615,24 +615,87 @@
 
 <h3>03.03 High Availability and Disaster Recovery</h3>
     <b>High Availability</b>
+        <b>Fault Tollerance</b> - maintain uptime in case of failure
+            <b>Raid Array</b>
+            <b>Redundant Power Supply</b>
+            <b>Redundant NIC</b>
+            <b>Load Balancer</b>
+        <b>Redundancy</b> - multiple devices as backup
+        <b>High Availability</b> - always on, always available backup
+        <b>Load Balancer</b>
+        <b>LBFO (Load Balancing / Fail Over)</b> 
+        <b>Port Aggregation</b> - increase speed and creates redundancy
 
     <b>Infrastructure Support</b>
+        <b>UPS Uninterruptible Power Supply</b> - offline, standby
+                                                - line-interactive UPS
+                                                - online, double-conversion UPS
+        <b>PDU Power Distribution Unit</b> - rack power
+        <b>Generator</b> - longer term power
+        <b>HVAC</b> - heat venting a/c system - keep server racks nice and cool
+        <b>Fire Suppression</b> - inert gas or chemical agents fire retardent; no water around servers 
 
     <b>Recovery Sites</b>
+        <b>Site Resiliency</b> - fail over business operations to another location; safe house
+        <b>Cold Site</b> - no infrastructure, only power and a place
+        <b>Hot Site</b> - entire backup of data center and ready to go - very expensive
+        <b>Warm Site</b> - has some infrastructure, but still needs some work to be online
+        <b>Cloud Recovery</b> - common now and 3rd party handles infrastructure and backup of data
 
     <b>Network Redundancy</b>
+        <b>Active-Passive</b> - if one device fails the other device takes over with the same configurations
+        <b>Active-Active</b> - both devices are active simultaneously, more difficult to maintain
+        <b>Diverse Path</b> - in case you have more than 1 ISP, 
+        <b>FHRP First Hop Redundancy Protocol</b> - if default gateway fails another router can takeover
+        <b>VRRP Virtual Router Redundancy Protocol</b> - virtual IP address for a router changes to another router, if there is a fault
 
     <b>Availability Concepts</b>
 
 <h2>04 Network Security</h2>
 <h3>04.01 Common Security Concepts</h3>
     <b>CIA Triad</b>
+        <b>Confidentiality</b> - data remains private
+            <b><i>encryption</i></b>
+        <b>Integrity</b> - data is what it says it is, any data change will be identified
+            <b><i>Non-repudiation, hashing</i></b>
+        <b>Available / Access</b> - systems are avaialble when needed 
+            <b><i>redundancy can help</i></b> 
 
     <b>Security Concepts</b>
+        <b>Vulnerability</b> - weakness in the system
+        <b>Zero-day Attack</b> - undiscovered vulnerability being discovered / exploited
+            <b>CVE Common Vulnerability and Exposure database</b>
+        <b>Threat</b> - thing or person that exploits a vulnerability; can be internal or external
+            <b><i>Accidental</i></b>
+            <b><i>Intentional</i></b>
+            <b><i>Internal / Insider</i></b> - least privilege is important 
+            <b><i>External</i></b>
+        <b>Vulnerabilty Databases</b> = CVE, NVD (Summary of CVE)
+            <b><i>higher score is more critical up to 10.0</i></b>
+        <b>Least Privilege</b> - defined user rights with limit to only what that user needs
+        <b>Role-Based Access Control (RBAC)</b> - access is provided based on the role of the user
+        <b>Zero-trust</b> - every user, every process, every device is locked down
 
     <b>Defense in Depth</b>
+        <b>Multi-layer Defense</b>
+            <b>Physical Controls</b> - locks, fences
+            <b>Technical Controls</b> - encryption, firewall, active directory
+            <b>Administrative Controls</b> - policies and procedures, proper onboard and offboard
+        <b>Physical Segmentation</b> - 
+        <b>Logical Segmentation</b> - VLAN segmentation, seperate networks
+        <b>Split Knowledge</b> - no one person knows all of information
+        <b>Dual Control</b> - more than 1 person to authorize, ex: 2 keys
+        <b>NAC Network Access Control</b> - 802.1X must authenticate when accessing physical port; EAP and RADIUS
+            <b><i>EAP Extensible Authentication Protocol</i></b>
+            <b><i>Remote Authentication Dial In User Service</i></b>
+            <b>Supplicant</b> - client
+            <b>Authenticator</b>
+            <b>Authentication Server</b>
+            <i>Authenticator start with EAP-Request -> Supplicant responds with EAP-Response ->
+                Authenticator passes response to Authentication Server -> if EAP-Response is correct then conversation protocol eventually starts</i>
+        <b>Honeypots</b> - Kippo, Google Hack Honeypot, Wordpot
 
-    <b>Authentication Methods</b>
+    <b>Authentication Methods</b> 
 
     <b>Risk Management</b>
 
