@@ -498,25 +498,80 @@
         <b>Auto-MDI-X</b> - makes it easy to connect 2 like devices, do NOT need crossover cable
 
 <h3>02.04 Wireless Networking</h3>
-    <b>Wireless Standards</b>
-        <b></b>
+    <b>Wireless Standards</b> - IEEE LAN/MAN standards
+        <b>802.11a</b> - 5GHz, 54MBs
+        <b>802.11b</b> - 2.4GHz, 11MBs -- more devices using this
+        <b>802.11g</b> - 2.4GHz, 54MBs -- upgrade to '11b'
+        <b>802.11n</b> - WiFi 4; 2.4 or 5 GHz; 600MBs; adds MIMO
+        <b>802.11ac</b> - WiFi 5; 5GHz; MU-MIMO introduced; 7GBs
+        <b>802.11ax</b> - WiFi 6; 5 or 2.4GHz; 1201 MBs; 8 bi-directional MU-MIMO streams (Orthogonal Frequency-Division Multiple Access)[OFDMA]
 
-    <b>Wireless Technologies</b>
+    <b>Wireless Technologies</b> - 802.11
+        <b>Frequency</b> - channels IEEE
+        <b>Bandwidth</b>
+        <b>Independent Basic Service Set (IBSS)</b> - Ad Hoc communication
+        <b>SSID or BSSID</b> - Service Set Identifier
+            <i>BSSID</i> - behind the scene ID, like the MAC address
+        <b>ESSID Extended Service Set Identifier</b> - roaming between access point without losing connection or reconnecting
 
     <b>Wireless Encryption</b>
+        <b>Authentication</b>
+        <b>MIC (Message Integrity Check)</b> 
+        <b>WPA</b> -- replaced WEP; NEVER use WEP
+        <b>WPA2</b> - WiFi Protected Access 2; CCMP uses AES data encryption 
+            <b><i>PSK Hash Brute Force</i></b> - vulnerability in WPA2
+        <b>WPA3</b> - GCMP; Galois Counter Mode Protocol; uses mutual authentication to guard against PSK Hash Brute Force
+        <b>SAE</b> - Simultaneous Authentication of Equals; IEEE dragonfly handshake; similar to Diffie-Hellman key exchange
+        <b>WPA2/3 Personal / PSK</b> - home connection; PreShared Key
+        <b>WPA2/3 Enterprise / WPA2/3 802.1X</b> - authenticates user with RADIUS server
 
     <b>Cellular Standards</b>
+        <b>GSM</b>  - Global System for Mobile Communications; used multiplexing
+        <b>CDMA</b> - Code Division Multiple Access; everyone comunicates at the same time with a code instead of Multiplexing
+        <b>4G LTE</b> - combined GSM & CDMA; 
+        <b>5G</b>   - greater throughput, helps with IoT and future large data transfer
 
 <h2>03 Network Operations</h2>
 <h3>03.01 Performance Metrics</h3>
     <b>Performance Metrics</b>
+        <b>Temperatures</b> - monitor temps
+        <b>CPU Usage</b>    - 
+        <b>Memory Usage</b> - 
+        <b>Bandwidth Monitor</b> - checking network traffic (SNMP) Simple Network Monitoring Protocol
+        <b>Latency</b> - pause between request and response, check with packet captures
+        <b>Jitter</b> - time between frames, makes VoIP calls choppy
+        <b>SNMP</b> - MIB-II; query the interface in MIB-II format
+        <b>Link Status</b> - is it up or down, how is traffic flowing?
+        <b>Dropping Packets</b>
 
-    <b>SNMP</b>
+    <b>SNMP</b> - Simple Network Management Protocol
+        <b>MIB</b> - Management Information Base
+            <b><i>OIDs</i></b> - Object Identifiers, UDP/161
+        <b>SNMPv3</b> - encrytped data and authentication
+        <b>OID</b> - object identifier can be referenced by name or number; long string of numbers
+        <b>SNMP Traps</b> - configure to monitor device sent over UDP/162
 
     <b>Logs and Monitoring</b>
+        <b>Logs</b> - information like traffic flow, or errors on devices
+        <b>Audit Logs</b> - logins and logouts
+        <b>Syslog</b> - used to gather log information and send logs to SIEM
+        <b>SIEM</b> - 
+        <b>Severity Levels</b> - 
+        <b>Interface Errors</b> -
+            <b><i>Runts</i></b> - frames smaller than 64 bytes; could be sign of collisions on network
+            <b><i>Giants</i></b> - frames larger than 1518 bytes 
+            <b><i>CRC Error</i></b> - Failed Frame Sequence Check (Cyclic Redundancy Check)
+            <b><i>Encapsulation Error</i></b> - switch may use different protocol, other switch is expecting different frame encapsulation
+        <b>Environmental Sensors</b> - proper HVAC and Humidity; check device and circuit load; flood monitoring
+        <b>Baseline Review</b> 
+        <b>NetFlow</b> - program that allow traffic flow information
+            <b><i>Probe</i></b> - tapped into the network and relays info back to collector
+            <b><i>Collector</i></b> - analyzer with extensive information about network traffic
+        <b>Uptime and Downtime</b>
 
 <h3>03.02 Organizational Poicies</h3>
     <b>Plans and Procedures</b>
+        <b></b>
 
     <b>Security Policies</b>
 
